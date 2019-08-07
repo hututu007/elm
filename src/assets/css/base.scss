@@ -1,0 +1,22 @@
+// 自定义样式初始化
+a {
+  text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+//公共样式
+.clearfix {
+  display: inline-block;
+
+  &:after {
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+}

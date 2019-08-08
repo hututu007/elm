@@ -1,5 +1,5 @@
 <template>
-  <div id="tab">
+  <div id="e-tab">
     <div class="tab-item">
       <router-link to="/goods" tag="a">商品</router-link>
     </div>
@@ -45,7 +45,7 @@
 </script>
 
 <style scoped lang="scss">
-  #tab {
+  #e-tab {
     display: flex;
     text-align: center;
     width: 100%;

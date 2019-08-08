@@ -6,7 +6,9 @@
     <div class="tab">
       <e-tab></e-tab>
     </div>
-    <div class="content"></div>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -54,6 +56,7 @@
 </script>
 
 <style scoped lang="scss">
-  #index {}
+  #index {
+  }
 
 </style>

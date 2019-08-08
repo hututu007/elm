@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import 'normalize.css' //样式初始化插件
-import './assets/css/index.scss' 
+import './assets/css/index.scss'
+import animated from 'animate.css' 
 
+
+Vue.use(animated)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

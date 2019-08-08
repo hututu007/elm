@@ -30,36 +30,40 @@
       <span class="text">{{data.bulletin}}</span>
       <i class="icon-keyboard_arrow_right"></i>
     </div>
-    <div class="model-wrap" v-show="modelShow">
-      <div class="bj-wrap clearfix">
-        <div class="main-wrap">
-          <div class="title">
-            <span>{{data.name}}</span>
-          </div>
-          <div class="star-wrap">
-            <e-star :size='48' :score='data.score'></e-star>
-          </div>
-          <div class="you-hui">
-            <e-lineText text='优惠信息'></e-lineText>
-          </div>
-          <ul v-if="data.supports">
-            <li v-for="(item,index) in data.supports" :key="index">
-              <span class="icon" :class="classMap[index]"></span>
-              <span class="text">{{data.supports[index].description}}</span>
-            </li>
-          </ul>
-          <div class="shang-jia-gong-gao">
-            <e-lineText text='商家公告'></e-lineText>
-          </div>
-          <div class="gong-gao-text">
-            <p>{{data.bulletin}}</p>
+    <!-- 遮罩层 -->
+    <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+      <div class="model-wrap" v-show="modelShow">
+        <div class="bj-wrap clearfix">
+          <div class="main-wrap">
+            <div class="title">
+              <span>{{data.name}}</span>
+            </div>
+            <div class="star-wrap">
+              <e-star :size='48' :score='data.score'></e-star>
+            </div>
+            <div class="you-hui">
+              <e-lineText text='优惠信息'></e-lineText>
+            </div>
+            <ul v-if="data.supports">
+              <li v-for="(item,index) in data.supports" :key="index">
+                <span class="icon" :class="classMap[index]"></span>
+                <span class="text">{{data.supports[index].description}}</span>
+              </li>
+            </ul>
+            <div class="shang-jia-gong-gao">
+              <e-lineText text='商家公告'></e-lineText>
+            </div>
+            <div class="gong-gao-text">
+              <p>{{data.bulletin}}</p>
+            </div>
           </div>
         </div>
+        <div class="close-wrap" @click="modelShow = false">
+          <i class="icon-close"></i>
+        </div>
       </div>
-      <div class="close-wrap" @click="modelShow = false">
-        <i class="icon-close"></i>
-      </div>
-    </div>
+    </transition>
+
   </div>
 </template>
 
@@ -101,8 +105,7 @@
     watch: {
 
     },
-    methods: {
-    },
+    methods: {},
   };
 
 </script>
@@ -193,6 +196,7 @@
 
         span {
           line-height: 24px;
+          
         }
 
         .icon-keyboard_arrow_right {
@@ -295,9 +299,14 @@
                 height: 16px;
                 border-radius: 2px;
                 display: inline-block;
-                vertical-align: top;
+                vertical-align: middle;
                 margin-right: 6px;
                 @include huo-dong(2);
+              }
+              .text{
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 16px;
               }
             }
           }

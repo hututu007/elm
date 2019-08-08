@@ -1,0 +1,52 @@
+// 这个reset 是宿命给的
+*{
+	margin:0; 
+	padding:0;
+}
+body{
+	font:16px/1.5 "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; 
+	color:#000;
+}
+ul{
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:inherit;
+}
+input,button,textarea,select,textarea{
+	-webkit-appearance:none; 
+	border-radius:inherit; 
+	font:inherit; 
+	text-align:inherit; 
+	color:inherit;
+}
+label,input,button,select,textarea{
+	box-sizing:border-box; 
+	display:inline-block; 
+	vertical-align:middle;
+}
+input,button,textarea,select{
+	outline:none;
+}
+table{
+	border-collapse:collapse; 
+	border-spacing:0;
+}
+a{
+	color:#666; 
+	text-decoration:none;
+}
+a:hover{
+	color:#666;
+}
+img,video,canvas{
+	max-width:100%; 
+	margin:0 auto; 
+	vertical-align:middle;
+}
+
+// 下面的是我自己写的
+body{
+  font-size: 12px;
+  line-height: 1;
+}

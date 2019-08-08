@@ -1,15 +1,10 @@
 <template>
-  <div id="index">
-    <div class="header"></div>
-    <div class="tab">
-        <e-tab></e-tab>
-    </div>
-    <div class="content"></div>
+  <div id="merchant">
+    我是商家
   </div>
 </template>
 
 <script>
-  import tab from '../../components/tab'
   export default {
     props: {
 
@@ -22,9 +17,7 @@
     computed: {
 
     },
-    components: {
-      'e-tab': tab
-    },
+    components: {},
     created() {
 
     },
@@ -36,7 +29,7 @@
     },
     methods: {
 
-    },
+    }
   };
 
 </script>

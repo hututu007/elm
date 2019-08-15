@@ -134,6 +134,7 @@
       .content {
         padding-left: 16px;
         flex: 1;
+        min-width: 0;
 
         .title {
           height: 36px/$size;
@@ -168,7 +169,7 @@
             width: 12px;
             height: 12px;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
 
             @include huo-dong(1);
           }
@@ -176,8 +177,8 @@
           .text {
             color: rgb(255, 255, 255);
             font-size: 20px/$size;
-            // line-height: 24px/$size;
-            vertical-align: middle;
+            line-height: 24px/$size;
+            // vertical-align: middle;
             display: inline-block;
           }
         }
@@ -218,7 +219,7 @@
 
     .gong-gao {
       position: relative;
-      padding: 0 22px 0 12px;
+      padding: 8px 22px 8px 12px;
       height: 56px/$size;
       background: rgba(7, 17, 27, 0.2);
       white-space: nowrap;
@@ -232,13 +233,12 @@
         width: 22px;
         height: 12px;
         @include bg-image('../assets/img/bulletin');
-        margin-top: 8px;
       }
 
       .text {
         font-size: 20px/$size;
         color: rgb(255, 255, 255);
-        line-height: 56px/$size;
+        line-height: 12px;
         margin-right: 4px;
       }
 
@@ -258,6 +258,7 @@
       left: 0;
       background: rgba(7, 17, 27, .9);
       overflow: auto;
+      z-index: 100;
 
       // z-index: 100;
       .bj-wrap {

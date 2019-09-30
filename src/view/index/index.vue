@@ -57,6 +57,14 @@
 
 <style scoped lang="scss">
   #index {
+    .content {
+      width: 100%;
+      max-height: 100%;
+      position: fixed;
+      top: 175px;
+      bottom: 46px;
+      overflow: hidden;
+    }
   }
 
 </style>
